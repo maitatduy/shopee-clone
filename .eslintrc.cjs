@@ -1,4 +1,6 @@
-{
+const path = require("path")
+
+module.exports = {
   "root": true,
 
   "extends": [
@@ -21,6 +23,7 @@
     },
     "import/resolver": {
       "node": {
+        "path": [path.resolve(__dirname)],
         "extensions": [".js", ".jsx", ".ts", ".tsx"]
       }
     }
